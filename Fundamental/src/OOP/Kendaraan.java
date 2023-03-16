@@ -4,13 +4,13 @@ public abstract class Kendaraan {
     private String warna;
     private String merek;
     private String model;
-    private Integer kecepatanMax;
+    private Double kecepatanMax;
 
     Kendaraan() {
 
     }
 
-    Kendaraan(String warna, String merek, String model, Integer kecepatanMax) {
+    Kendaraan(String warna, String merek, String model, Double kecepatanMax) {
         this.warna = warna;
         this.merek = merek;
         this.model = model;
@@ -42,11 +42,11 @@ public abstract class Kendaraan {
         this.merek = merek;
     }
 
-    public Integer getKecepatanMax() {
+    public Double getKecepatanMax() {
         return kecepatanMax;
     }
 
-    public void setKecepatanMax(Integer kecepatanMax) {
+    public void setKecepatanMax(Double kecepatanMax) {
         this.kecepatanMax = kecepatanMax;
     }
 
