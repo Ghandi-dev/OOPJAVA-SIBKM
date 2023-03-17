@@ -6,11 +6,11 @@ public abstract class Kendaraan {
     private String model;
     private Double kecepatanMax;
 
-    Kendaraan() {
+    public Kendaraan() {
 
     }
 
-    Kendaraan(String warna, String merek, String model, Double kecepatanMax) {
+    public Kendaraan(String warna, String merek, String model, Double kecepatanMax) {
         this.warna = warna;
         this.merek = merek;
         this.model = model;
@@ -49,6 +49,8 @@ public abstract class Kendaraan {
     public void setKecepatanMax(Double kecepatanMax) {
         this.kecepatanMax = kecepatanMax;
     }
+
+    abstract void deskripsi();
 
     abstract void maju();
 

@@ -2,18 +2,18 @@ package OOP;
 
 public class Mobil extends Kendaraan {
 
-    Mobil() {
+    public Mobil() {
 
     }
 
-    Mobil(String warna, String merek, String model, Double kecepatanMax) {
+    public Mobil(String warna, String merek, String model, Double kecepatanMax) {
         super(warna, merek, model, kecepatanMax);
 
     }
 
     @Override
     void maju() {
-        System.out.println("Mobil berjalan maju");
+        System.out.printf("Mobil %s %s berjalan maju", getMerek(), getModel());
     }
 
     void mundur() {
@@ -28,6 +28,15 @@ public class Mobil extends Kendaraan {
     @Override
     int jumlahRoda() {
         return 4;
+    }
+
+    @Override
+    void deskripsi() {
+        System.out.printf("Model mobil : %s \n", getModel());
+        System.out.printf("Merek mobil : %s \n", getMerek());
+        System.out.printf("Warna mobil : %s \n", getWarna());
+        System.out.printf("Jumlah ban : %d \n", jumlahRoda());
+        System.out.printf("Kecepatan maximal : %s Km/h \n", getKecepatanMax());
     }
 
 }
